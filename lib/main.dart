@@ -1,3 +1,4 @@
+import 'package:e_cart/providers/cart.dart';
 import 'package:e_cart/providers/products_provider.dart';
 import 'package:e_cart/utils/Routes.dart';
 import 'package:flutter/material.dart';
@@ -15,8 +16,15 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return ChangeNotifierProvider(
-      create: (context) => Products(),
+    return MultiProvider(
+      providers: [
+        ChangeNotifierProvider(
+          create: (context) => Products(),
+        ),
+        ChangeNotifierProvider(
+          create: (context) => Cart(),
+        ),
+      ],
       child: MaterialApp(
         title: 'E-Cart',
         theme: ThemeData(

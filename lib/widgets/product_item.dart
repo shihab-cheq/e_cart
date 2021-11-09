@@ -1,19 +1,15 @@
 import 'package:e_cart/model/product.dart';
+import 'package:e_cart/providers/cart.dart';
 import 'package:e_cart/utils/Routes.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
 class ProductItem extends StatelessWidget {
-  // late final String id;
-  // late final String title;
-  // late final String image;
-
-  //ProductItem({required this.id, required this.title, required this.image});
 
   @override
   Widget build(BuildContext context) {
     final product = Provider.of<Product>(context, listen: false);
-    print('Rebuild  product item ...');
+    final cart = Provider.of<Cart>(context, listen: false);
 
     //val child =
     return ClipRRect(
@@ -44,7 +40,9 @@ class ProductItem extends StatelessWidget {
                   )),
           trailing: IconButton(
             icon: const Icon(Icons.shopping_cart),
-            onPressed: () {},
+            onPressed: () {
+              cart.addItem(product.id, product.title, product.price);
+            },
             color: Theme.of(context).accentColor,
           ),
         ),
