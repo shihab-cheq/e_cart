@@ -1,4 +1,5 @@
 import 'package:e_cart/providers/cart.dart';
+import 'package:e_cart/utils/Routes.dart';
 import 'package:e_cart/widgets/badge.dart';
 import 'package:e_cart/widgets/product_grid.dart';
 import 'package:flutter/material.dart';
@@ -48,7 +49,9 @@ class _ProductsOverviewScreenState extends State<ProductsOverviewScreen> {
               ),
               child: IconButton(
                 icon: const Icon(Icons.shopping_cart),
-                onPressed: () {},
+                onPressed: () {
+                  Navigator.of(context).pushNamed(Routes.CART_DETAILS);
+                },
               ),
             )
           ],

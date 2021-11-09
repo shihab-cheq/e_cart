@@ -1,3 +1,4 @@
+import 'package:e_cart/feature/cart/cart_screen.dart';
 import 'package:e_cart/providers/cart.dart';
 import 'package:e_cart/providers/products_provider.dart';
 import 'package:e_cart/utils/Routes.dart';
@@ -34,6 +35,7 @@ class MyApp extends StatelessWidget {
         home: ProductsOverviewScreen(),
         routes: {
           Routes.PRODUCT_DETIALS: (ctx) => ProductDetailsScreen(),
+          Routes.CART_DETAILS: (ctx) => const CartScreen(),
         },
       ),
     );
