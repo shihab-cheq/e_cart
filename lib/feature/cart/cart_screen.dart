@@ -4,14 +4,13 @@ import 'package:provider/provider.dart';
 
 class CartScreen extends StatelessWidget {
   const CartScreen({Key? key}) : super(key: key);
-
   @override
   Widget build(BuildContext context) {
     final cart = Provider.of<Cart>(context);
 
     return Scaffold(
       appBar: AppBar(
-        title: Text("Your Cart"),
+        title: const Text("Your Cart"),
       ),
       body: Column(
         children: [
