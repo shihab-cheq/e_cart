@@ -1,6 +1,6 @@
-import 'package:e_cart/providers/orders.dart';
-import 'package:e_cart/widgets/app_drawer.dart';
-import 'package:e_cart/widgets/order_history_item.dart';
+import 'package:e_cart/feature/order_history/provider/orders.dart';
+import 'package:e_cart/feature/home/widget/app_drawer.dart';
+import 'package:e_cart/feature/order_history/widget/order_history_item.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 

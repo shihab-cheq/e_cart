@@ -1,4 +1,4 @@
-import 'package:e_cart/providers/cart.dart';
+import 'package:e_cart/feature/cart/provider/cart.dart';
 import 'package:flutter/foundation.dart';
 
 class OrderItem {

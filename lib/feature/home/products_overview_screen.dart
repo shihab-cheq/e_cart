@@ -1,8 +1,8 @@
-import 'package:e_cart/providers/cart.dart';
+import 'package:e_cart/feature/cart/provider/cart.dart';
 import 'package:e_cart/utils/routes.dart';
-import 'package:e_cart/widgets/app_drawer.dart';
-import 'package:e_cart/widgets/badge.dart';
-import 'package:e_cart/widgets/product_grid.dart';
+import 'package:e_cart/feature/home/widget/app_drawer.dart';
+import 'package:e_cart/feature/home/widget/badge.dart';
+import 'package:e_cart/feature/home/widget/product_grid.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 

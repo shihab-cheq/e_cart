@@ -1,6 +1,6 @@
-import 'package:e_cart/providers/cart.dart';
-import 'package:e_cart/providers/orders.dart';
-import 'package:e_cart/widgets/cart_item.dart';
+import 'package:e_cart/feature/cart/provider/cart.dart';
+import 'package:e_cart/feature/order_history/provider/orders.dart';
+import 'package:e_cart/feature/cart/widget/cart_item.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
