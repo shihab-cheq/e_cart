@@ -1,5 +1,6 @@
 import 'package:e_cart/providers/cart.dart';
-import 'package:e_cart/utils/Routes.dart';
+import 'package:e_cart/utils/routes.dart';
+import 'package:e_cart/widgets/app_drawer.dart';
 import 'package:e_cart/widgets/badge.dart';
 import 'package:e_cart/widgets/product_grid.dart';
 import 'package:flutter/material.dart';
@@ -56,6 +57,7 @@ class _ProductsOverviewScreenState extends State<ProductsOverviewScreen> {
             )
           ],
         ),
+        drawer: const AppDrawer(),
         body: ProductGrid(showFavs: showFavs));
   }
 }

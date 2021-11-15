@@ -1,4 +1,5 @@
 import 'package:e_cart/providers/cart.dart';
+import 'package:e_cart/providers/orders.dart';
 import 'package:e_cart/widgets/cart_item.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
@@ -30,7 +31,11 @@ class CartScreen extends StatelessWidget {
                   const Spacer(),
                   Chip(label: Text('\$${cart.totalAmount}')),
                   TextButton(
-                    onPressed: () {},
+                    onPressed: () {
+                      Provider.of<Orders>(context, listen: false).addOrder(
+                          cart.items.values.toList(), cart.totalAmount);
+                      cart.clear();
+                    },
                     child: const Text('Order Now'),
                   )
                 ],

@@ -1,7 +1,9 @@
 import 'package:e_cart/feature/cart/cart_screen.dart';
+import 'package:e_cart/feature/order_history/order_history.dart';
 import 'package:e_cart/providers/cart.dart';
+import 'package:e_cart/providers/orders.dart';
 import 'package:e_cart/providers/products_provider.dart';
-import 'package:e_cart/utils/Routes.dart';
+import 'package:e_cart/utils/routes.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
@@ -25,6 +27,9 @@ class MyApp extends StatelessWidget {
         ChangeNotifierProvider(
           create: (context) => Cart(),
         ),
+        ChangeNotifierProvider(
+          create: (context) => Orders(),
+        ),
       ],
       child: MaterialApp(
         title: 'E-Cart',
@@ -36,6 +41,7 @@ class MyApp extends StatelessWidget {
         routes: {
           Routes.PRODUCT_DETIALS: (ctx) => ProductDetailsScreen(),
           Routes.CART_DETAILS: (ctx) => const CartScreen(),
+          Routes.ORDER_HISTORY: (ctx) => const OrderHistory()
         },
       ),
     );
