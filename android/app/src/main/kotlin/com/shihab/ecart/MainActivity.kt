@@ -1,4 +1,4 @@
-package com.shihab.ecart.e_cart
+package com.shihab.ecart
 
 import io.flutter.embedding.android.FlutterActivity
 

@@ -5,7 +5,6 @@ import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
 class ProductItem extends StatelessWidget {
-
   @override
   Widget build(BuildContext context) {
     final product = Provider.of<Product>(context, listen: false);
@@ -42,6 +41,16 @@ class ProductItem extends StatelessWidget {
             icon: const Icon(Icons.shopping_cart),
             onPressed: () {
               cart.addItem(product.id, product.title, product.price);
+              final snackBar = SnackBar(
+                content: const Text('Product Added to Cart!'),
+                action: SnackBarAction(
+                  label: 'Undo',
+                  onPressed: () {
+                    // todo:  code for undo...
+                  },
+                ),
+              );
+              ScaffoldMessenger.of(context).showSnackBar(snackBar);
             },
             color: Theme.of(context).accentColor,
           ),
