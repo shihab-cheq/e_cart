@@ -14,7 +14,7 @@ import 'feature/details/product_details_screen.dart';
 
 void main() async{
   // Initialize Firebase.
-  await Firebase.initializeApp();
+  //Firebase.initializeApp();
   runApp(const MyApp());
 }
 
@@ -23,7 +23,6 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    FirebaseCrashlytics.instance.crash();
     return MultiProvider(
       providers: [
         ChangeNotifierProvider(
