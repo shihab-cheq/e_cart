@@ -1,3 +1,4 @@
+import 'package:e_cart/feature/edit_product/edit_product_screen.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:firebase_crashlytics/firebase_crashlytics.dart';
 import 'package:e_cart/feature/cart/cart_screen.dart';
@@ -45,7 +46,8 @@ class MyApp extends StatelessWidget {
         routes: {
           Routes.PRODUCT_DETIALS: (ctx) => ProductDetailsScreen(),
           Routes.CART_DETAILS: (ctx) => const CartScreen(),
-          Routes.ORDER_HISTORY: (ctx) => const OrderHistory()
+          Routes.ORDER_HISTORY: (ctx) => const OrderHistory(),
+          Routes.EDIT_PRODUCT: (ctx) => const EditProductScreen(),
         },
       ),
     );

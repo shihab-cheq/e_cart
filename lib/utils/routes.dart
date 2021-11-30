@@ -3,4 +3,5 @@ class Routes {
   static String CART_DETAILS = "cart_details";
   static String HOME_SCREEN = "/";
   static String ORDER_HISTORY = "order_history";
+  static String EDIT_PRODUCT = "edit_product";
 }
